@@ -165,7 +165,7 @@ namespace ofxAssets {
 			return this->fonts[id];
 		} else if (this->fontFilenames.count(name) > 0) {
 			this->fonts.insert(pair<pair<string,int>,ofTrueTypeFont>(id, ofTrueTypeFont()));
-			this->fonts[id].loadFont(this->fontFilenames[name], size);
+			this->fonts[id].loadFont(this->fontFilenames[name], size, true);
 			ofLogNotice("ofxAssets") << "Loaded font asset '" << name << "' (" << size << ")" << endl;
 		} else {
 			ofLogError("ofxAssets") << "Requested font asset'" << name << "' doesn't exist, have you got all the files in the right place in your data/assets/ folder?";
